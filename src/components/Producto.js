@@ -7,7 +7,10 @@ const Producto = ({producto, carrito, agregarProducto, productos}) => {
     //Agragar producto al carrito
     const seleccionarProducto = id => {
         const producto = productos.filter(producto => producto.id === id);
-        console.log(producto[0]);
+        agregarProducto([
+            ...carrito,
+            producto
+        ]);
     }
 
     return ( 
@@ -23,3 +26,5 @@ const Producto = ({producto, carrito, agregarProducto, productos}) => {
 }
  
 export default Producto;
+
+
